@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4650971 */
+  src: url('iconfont.woff2?t=1725333727882') format('woff2'),
+       url('iconfont.woff?t=1725333727882') format('woff'),
+       url('iconfont.ttf?t=1725333727882') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiugai:before {
+  content: "\e654";
+}
+
+.icon-quanbudongtai:before {
+  content: "\e92f";
+}
+
+.icon-huidaodingbu:before {
+  content: "\e60d";
+}
+
+.icon-shoucang:before {
+  content: "\e65d";
+}
+
+.icon-shoucang-copy:before {
+  content: "\eb4b";
+}
+
+.icon-shanchu:before {
+  content: "\e64c";
+}
+
+.icon-xingbie-weizhi-copy:before {
+  content: "\e600";
+}
+
+.icon-Male:before {
+  content: "\e685";
+}
+
+.icon-Female:before {
+  content: "\e686";
+}
+
+.icon-down:before {
+  content: "\e8f2";
+}
+
+.icon-up-copy:before {
+  content: "\eb49";
+}
+
+.icon-tupian:before {
+  content: "\e64a";
+}
+
+.icon-zhankai:before {
+  content: "\e60c";
+}
+
+.icon-zhankai-copy:before {
+  content: "\eb48";
+}
+
+.icon-liulanshu:before {
+  content: "\e60e";
+}
+
+.icon-pinglunshu:before {
+  content: "\e663";
+}
+
+.icon-biaoqian_o:before {
+  content: "\eb47";
+}
+
+.icon-zuozhe:before {
+  content: "\e65c";
+}
+
+.icon-sousuo:before {
+  content: "\e62f";
+}
+
+.icon-dianzanshu:before {
+  content: "\e6b0";
+}
+
+.icon-dianzanshu-pink-copy:before {
+  content: "\eb4a";
+}
+

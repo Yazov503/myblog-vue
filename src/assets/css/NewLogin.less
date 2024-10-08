@@ -1,0 +1,404 @@
+@pink: #fb7299;
+
+/* 动画 */
+@keyframes bg {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes login {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes login-exit {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes register {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1600px;
+}
+
+/* 背景 */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: transparent no-repeat center;
+    background-size: cover;
+    animation: bg 0.5s;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* 确保视频在所有内容的下方 */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 确保视频覆盖整个背景 */
+}
+
+/* 标题 */
+.title {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 6px;
+    text-decoration: none;
+    color: white;
+    z-index: 1;
+}
+
+/* 登录表单域 */
+.login-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 600px;
+    height: 100%;
+    background: rgba(143, 132, 100, 0.4);
+    backdrop-filter: blur(16px);
+    animation: login 1.2s;
+}
+
+.login-exit-active {
+    animation: login-exit 1.2s forwards;
+}
+
+.login-block .login-title {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.login-block .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+}
+
+.login-block .login-form .el-input__inner {
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    padding: 0px 8px;
+    text-align: center;
+    transition: all 0.5s;
+    margin-bottom: 32px;
+}
+
+.login-block .login-form .el-input__inner::placeholder {
+    color: white !important;
+}
+
+.login-block .login-form .el-input__inner:focus {
+    border-bottom: 1px solid @pink;
+}
+
+.login-block .login-form .reset-button {
+    background-color: @pink;
+    width: 300px;
+    padding: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login-block .login-form .login-button {
+    background-color: @pink;
+    width: 300px;
+    padding: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login-block .login-form .el-button:hover {
+    opacity: 0.5;
+}
+
+.el-button+.el-button,
+.el-checkbox.is-bordered+.el-checkbox.is-bordered {
+    margin-left: 0px;
+}
+
+.login-block .link {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.login-block .link div {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.login-block .link div:hover {
+    color: @pink;
+}
+
+.login-block .link .register {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.login-block .link .register:hover {
+    color: @pink;
+}
+
+.login-block .login-form .code-pane {
+    width: 300px;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 32px;
+    transition: all 0.5s;
+}
+
+.login-block .login-form .code-pane:focus-within {
+    border-bottom: 1px solid transparent;
+}
+
+.login-block .login-form .code-pane .code {
+    width: 50%;
+    border: none;
+    margin: 0;
+}
+
+.login-block .login-form .code-pane .code-button {
+    width: 40%;
+    margin-left: 5%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.login-block .login-form .code-pane .code-button:hover {
+    opacity: 0.5;
+}
+
+/* 登录表单域 */
+.register-block {
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 600px;
+    height: 100%;
+    background: rgba(143, 132, 100, .4);
+    backdrop-filter: blur(16px);
+
+    animation: register 1.2s;
+}
+
+.register-block .register-title {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.register-block .register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+}
+
+.register-block .register-form input {
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    padding: 0px 8px;
+    text-align: center;
+    transition: all 0.5s;
+    margin-bottom: 32px;
+}
+
+.register-block .register-form input::placeholder {
+    color: white !important;
+}
+
+.register-block .register-form input:focus {
+    border-bottom: 1px solid @pink;
+}
+
+.register-block .register-form .code-pane {
+    width: 300px;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 32px;
+    transition: all 0.5s;
+}
+
+.register-block .register-form .code-pane:focus-within {
+    border-bottom: 1px solid transparent;
+}
+
+.register-block .register-form .code-pane .code {
+    width: 50%;
+    border: none;
+    margin: 0;
+}
+
+.register-block .register-form .code-pane .code-button {
+    width: 40%;
+    margin-left: 5%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.register-block .register-form .code-pane .code-button:hover {
+    opacity: 0.5;
+}
+
+.register-block .register-form .reset-button {
+    background-color: @pink;
+    width: 300px;
+    padding: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.register-block .register-form .register-button {
+    background-color: @pink;
+    width: 300px;
+    padding: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.register-block .register-form .register-button:hover {
+    opacity: 0.5;
+}
+
+.el-button+.el-button,
+.el-checkbox.is-bordered+.el-checkbox.is-bordered {
+    margin-left: 0px;
+}
+
+.register-block .link {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.register-block .link a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.register-block .link a:hover {
+    color: @pink;
+}
+
+.register-block .link .login {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.register-block .link div:hover {
+    color: @pink;
+}

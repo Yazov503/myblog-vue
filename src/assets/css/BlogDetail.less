@@ -1,0 +1,334 @@
+@pink: #fb7299;
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  /* 确保视频在所有内容的下方 */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 确保视频覆盖整个背景 */
+}
+
+.blog-detail-container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin: 100px auto 10px auto;
+  width: 50%;
+}
+
+.blog-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: start;
+  gap: 2%;
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.blog-tags {
+  margin-bottom: 15px;
+}
+
+.blog-tag {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 0.9em;
+}
+
+.blog-content {
+  margin: 10px 10px;
+}
+
+.back-button {
+  position: relative;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.liked {
+  color: @pink;
+}
+
+.collected {
+  color: @pink;
+}
+
+.comment-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.comment-input {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.login-prompt {
+  font-size: 1em;
+  color: #777;
+}
+
+.login-prompt a {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.login-prompt a:hover {
+  text-decoration: underline;
+}
+
+.editor-trigger {
+  color: #727374;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.comments-display {
+  margin-top: 20px;
+}
+
+.comments-display h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.comments-display ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comments-display li {
+  padding: 15px;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 10px;
+}
+
+.comments-display li:last-child {
+  border-bottom: none;
+}
+
+.comments-display p {
+  margin: 5px 0;
+}
+
+.comments-display .username {
+  font-weight: bold;
+  color: #333;
+}
+
+.comments-display .comment-content {
+  margin-top: 5px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.comments-display .comment-meta {
+  font-size: 0.8em;
+  color: #999;
+  margin-top: 5px;
+}
+
+.comments-display .comment-meta span {
+  margin-right: 15px;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.comment-meta {
+  display: flex;
+}
+
+.comment-meta p {
+  margin: 0;
+  margin-right: 30px;
+  color: #666;
+  font-size: 1em;
+}
+
+.comment-meta .comment-like-num:hover {
+  color: @pink;
+}
+
+.comment-meta .comment-like-num p {
+  display: inline-block;
+}
+
+.comment-meta .comment-reply-num:hover {
+  color: @pink;
+}
+
+.replies {
+  margin-top: 5px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.replies .username {
+  font-weight: bold;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.replies .reply-content {
+  margin-left: 3px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.reply-meta {
+  font-size: 0.75em;
+  color: #999;
+  margin-top: 3px;
+  display: flex;
+}
+
+.reply-meta p {
+  margin-right: 30px;
+}
+
+.replies {
+  list-style-type: none;
+  padding: 0;
+}
+
+.replies li {
+  margin-bottom: 10px;
+}
+
+.view-more {
+  cursor: pointer;
+}
+
+.view-more:hover {
+  color: @pink;
+}
+
+.view-more-back {
+  font-size: 0.8em;
+  color: #666;
+  cursor: pointer;
+}
+
+.view-more-back:hover {
+  color: @pink;
+}
+
+.reply-input-container {
+  margin-top: 10px;
+  padding-left: 40px;
+  border-left: 2px solid #ccc;
+}
+
+.reply-input {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  resize: none;
+  font-size: 14px;
+}
+
+.submit-reply-button {
+  margin-top: 10px;
+  background-color: #00a1d6;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-reply-button:hover {
+  background-color: #008ec3;
+}
+
+.reply-meta .reply-like-num:hover {
+  color: @pink;
+}
+
+.reply-meta .reply-like-num p {
+  display: inline-block;
+}
+
+.reply-meta .reply-reply-num:hover {
+  color: @pink;
+}
+
+.author-avatar {
+  width: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.comment-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding-top: 0.2%;
+  margin-right: 10px;
+}
+
+.comment-item {
+  display: flex;
+}
+
+.jump-to-personal:hover {
+  color: @pink;
+}
+
+.bottom-reached {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  height: 5px;
+}
